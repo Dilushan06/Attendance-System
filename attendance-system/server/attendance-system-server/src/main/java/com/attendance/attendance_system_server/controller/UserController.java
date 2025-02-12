@@ -1,6 +1,6 @@
-package com.attendance.controller;
+package com.attendance.attendance_system_server.controller;
 
-import com.attendance.utils.JwtUtil;
+import com.attendance.attendance_system_server.utils.JwtUtil;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;

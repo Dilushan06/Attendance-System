@@ -1,12 +1,15 @@
-package com.attendance.utils;
+package com.attendance.attendance_system_server.utils;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
 
+import java.security.Key;
 import java.util.Date;
 
 public class JwtUtil {
-    private static final String SECRET_KEY = "secret123";
+    // Generate a secure key for HS256
+    private static final Key SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
     public static String generateToken(String username) {
         return Jwts.builder()
