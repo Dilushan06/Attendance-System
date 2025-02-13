@@ -6,3 +6,7 @@ if (!user) {
     document.getElementById('username').textContent = user.username;
 }
 
+document.getElementById('logoutButton').addEventListener('click', () => {
+    localStorage.removeItem('user');
+    window.location.href = 'login.html';
+});
