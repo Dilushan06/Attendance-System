@@ -22,6 +22,7 @@ public class UserController {
 
         if (VALID_USERNAME.equals(username) && VALID_PASSWORD.equals(password)) {
             String token = JwtUtil.generateToken(username);
+            response.put("username", username);
             response.put("token", token);
         } else {
             response.put("error", "Invalid username or password");
