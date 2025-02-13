@@ -1,3 +1,10 @@
+import { login } from './loginService.js';
+
+
+if (localStorage.getItem('user')) {
+    window.location.href = 'home.html'; // Redirect to home page if already logged in
+}
+
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
