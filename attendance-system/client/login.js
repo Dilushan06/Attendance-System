@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
 
         if (user) {
             localStorage.setItem('user', JSON.stringify(user));
-            window.location.href = 'home.html';
+            window.location.href = 'home.html'; //Redirect to home page
         } else {
 
             alert('Invalid username or password');
